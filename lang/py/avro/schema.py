@@ -1047,6 +1047,10 @@ class UUIDSchema(LogicalSchema, PrimitiveSchema):
             # If it's a value error, then the string
             # is not a valid hex code for a UUID.
             return None
+        except TypeError:
+            # If it's not a valid type for a UUID,
+            # then it can't be a valid UUID.
+            return None
 
         return self
 

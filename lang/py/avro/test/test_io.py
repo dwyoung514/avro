@@ -143,6 +143,10 @@ SCHEMAS_TO_VALIDATE = tuple(
             {"type": "string", "logicalType": "uuid"},
             "570feebe-2bbc-4937-98df-285944e1dbbd",
         ),  # UUID4
+        (
+            ["null", {"type": "string", "logicalType": "uuid"}],
+            None,
+        ),  # Optional UUID
         ({"type": "string", "logicalType": "unknown-logical-type"}, "12345abcd"),
         ({"type": "string", "logicalType": "timestamp-millis"}, "12345abcd"),
         (
